@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - AutoWire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #EF4444; /* Red for deletion */
+            --bg: #0F172A;
+            --card: #1E293B;
+            --text: #F8FAFC;
+            --subtext: #94A3B8;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: rgba(239, 68, 68, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: var(--primary);
+            font-size: 40px;
+        }
+        h1 {
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        p {
+            color: var(--subtext);
+            margin-bottom: 32px;
+        }
+        .steps {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 32px;
+        }
+        .steps h2 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            color: var(--text);
+        }
+        ol {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        li {
+            margin-bottom: 12px;
+            color: var(--subtext);
+        }
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: #F59E0B;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: var(--subtext);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon-circle">🗑️</div>
+        <h1>Account Deletion</h1>
+        <p>We're sorry to see you go. If you wish to delete your AutoWire account and all associated data, please follow the steps below.</p>
+
+        <div class="warning-box">
+            <strong>Important:</strong> Account deletion is permanent. Once deleted, your garage data, service history, and community posts cannot be recovered.
+        </div>
+
+        <div class="steps">
+            <h2>How to Delete</h2>
+            <ol>
+                <li>Open the <strong>AutoWire</strong> app on your device.</li>
+                <li>Go to the <strong>Settings</strong> menu (cog icon) on the main dashboard.</li>
+                <li>Scroll down to <strong>Data Management</strong>.</li>
+                <li>Tap <strong>Delete Account</strong> and confirm your request.</li>
+            </ol>
+            <p style="margin-top: 16px; margin-bottom: 0; font-size: 14px;">Alternatively, you can request deletion by emailing us at:</p>
+            <a href="mailto:bantengjne@gmail.com" style="color: #3B82F6; text-decoration: none; font-weight: 600;">bantengjne@gmail.com</a>
+        </div>
+
+        <a href="mailto:bantengjne@gmail.com?subject=Account Deletion Request" class="btn">Send Deletion Request</a>
+
+        <div class="footer">
+            &copy; 2026 Ahsan Studio. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
