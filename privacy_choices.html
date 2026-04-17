@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Choices - AutoWire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3B82F6;
+            --bg: #0F172A;
+            --card: #1E293B;
+            --text: #F8FAFC;
+            --subtext: #94A3B8;
+            --border: rgba(255, 255, 255, 0.08);
+            --success: #10B981;
+            --danger: #EF4444;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+        .logo span { color: var(--primary); }
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin: 0 0 8px;
+        }
+        .subtitle {
+            color: var(--subtext);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 16px;
+        }
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .icon {
+            font-size: 1.75rem;
+            flex-shrink: 0;
+        }
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin: 0 0 4px;
+        }
+        .card-desc {
+            font-size: 0.875rem;
+            color: var(--subtext);
+            margin: 0;
+        }
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .badge-required {
+            background: rgba(59,130,246,0.15);
+            color: var(--primary);
+        }
+        .badge-optional {
+            background: rgba(148,163,184,0.15);
+            color: var(--subtext);
+        }
+        .status-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-top: 1px solid var(--border);
+            font-size: 0.875rem;
+        }
+        .status-label { color: var(--subtext); }
+        .status-value {
+            font-weight: 600;
+            color: var(--success);
+        }
+        .status-value.na { color: var(--subtext); }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: opacity 0.2s;
+        }
+        .btn:hover { opacity: 0.85; }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        .btn-danger {
+            background: rgba(239,68,68,0.12);
+            color: var(--danger);
+            border: 1px solid rgba(239,68,68,0.25);
+        }
+        .btn-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+        .info-box {
+            background: rgba(59,130,246,0.07);
+            border: 1px solid rgba(59,130,246,0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 0.875rem;
+            color: var(--subtext);
+            margin-bottom: 16px;
+        }
+        .info-box strong { color: var(--text); }
+        .footer {
+            text-align: center;
+            color: var(--subtext);
+            font-size: 0.8rem;
+            margin-top: 40px;
+        }
+        .footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">Auto<span>Wire</span></div>
+        <h1>Your Privacy Choices</h1>
+        <p class="subtitle">Manage how AutoWire uses your data</p>
+    </div>
+
+    <!-- Info box -->
+    <div class="info-box">
+        <strong>AutoWire is designed with privacy first.</strong> We do not sell your personal data to third parties, and we do not use cross-app tracking. The choices below let you control the limited data we do collect.
+    </div>
+
+    <!-- Analytics -->
+    <div class="card">
+        <div class="card-header">
+            <div class="icon">📊</div>
+            <div>
+                <p class="card-title">Analytics &amp; Crash Reports <span class="badge badge-optional">Optional</span></p>
+                <p class="card-desc">Anonymous usage data and crash logs help us improve app stability and features. No personal identifiers are included.</p>
+            </div>
+        </div>
+        <div class="status-row">
+            <span class="status-label">Data collected</span>
+            <span class="status-value">App events, crash logs (anonymous)</span>
+        </div>
+        <div class="status-row">
+            <span class="status-label">Shared with</span>
+            <span class="status-value na">Firebase (Google) — anonymized</span>
+        </div>
+        <div class="btn-row">
+            <a href="mailto:bantengjne@gmail.com?subject=Opt-Out%20Analytics%20-%20AutoWire&body=Please%20opt%20me%20out%20of%20analytics%20data%20collection%20for%20AutoWire." class="btn btn-danger">Opt Out of Analytics</a>
+        </div>
+    </div>
+
+    <!-- Account data -->
+    <div class="card">
+        <div class="card-header">
+            <div class="icon">👤</div>
+            <div>
+                <p class="card-title">Account &amp; Profile Data <span class="badge badge-optional">Optional</span></p>
+                <p class="card-desc">If you sign in, we store your email address and usage preferences to sync your garage and settings across devices.</p>
+            </div>
+        </div>
+        <div class="status-row">
+            <span class="status-label">Data collected</span>
+            <span class="status-value na">Email, garage vehicles, service logs</span>
+        </div>
+        <div class="status-row">
+            <span class="status-label">Stored in</span>
+            <span class="status-value na">Firebase Firestore (encrypted)</span>
+        </div>
+        <div class="btn-row">
+            <a href="https://fahmimo.github.io/AutoWire/delete_account.html" class="btn btn-danger">Request Account Deletion</a>
+        </div>
+    </div>
+
+    <!-- Subscription -->
+    <div class="card">
+        <div class="card-header">
+            <div class="icon">💳</div>
+            <div>
+                <p class="card-title">Subscription &amp; Purchase Data <span class="badge badge-required">Required for service</span></p>
+                <p class="card-desc">Subscription status is verified through Apple's StoreKit. We do not store or process payment information directly.</p>
+            </div>
+        </div>
+        <div class="status-row">
+            <span class="status-label">Handled by</span>
+            <span class="status-value">Apple App Store</span>
+        </div>
+        <div class="status-row">
+            <span class="status-label">Manage subscription</span>
+            <span class="status-value na">Via iOS Settings → Apple ID → Subscriptions</span>
+        </div>
+        <div class="btn-row">
+            <a href="https://support.apple.com/en-us/HT202039" class="btn btn-primary" target="_blank">Manage on Apple</a>
+        </div>
+    </div>
+
+    <!-- No tracking -->
+    <div class="card">
+        <div class="card-header">
+            <div class="icon">🚫</div>
+            <div>
+                <p class="card-title">Cross-App Tracking</p>
+                <p class="card-desc">AutoWire does <strong>not</strong> use cross-app or cross-site tracking. We do not share your data with advertising networks.</p>
+            </div>
+        </div>
+        <div class="status-row">
+            <span class="status-label">Ad tracking</span>
+            <span class="status-value">Not used</span>
+        </div>
+        <div class="status-row">
+            <span class="status-label">Data sold to third parties</span>
+            <span class="status-value">Never</span>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="card">
+        <div class="card-header">
+            <div class="icon">✉️</div>
+            <div>
+                <p class="card-title">Contact &amp; Data Requests</p>
+                <p class="card-desc">For any privacy-related requests — including data access, correction, or deletion — contact us directly.</p>
+            </div>
+        </div>
+        <div class="btn-row">
+            <a href="mailto:bantengjne@gmail.com?subject=Privacy%20Request%20-%20AutoWire" class="btn btn-primary">Email Privacy Team</a>
+            <a href="https://fahmimo.github.io/AutoWire/privacy_policy.html" class="btn btn-primary" target="_blank">Full Privacy Policy</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>AutoWire · <a href="https://fahmimo.github.io/AutoWire/privacy_policy.html">Privacy Policy</a> · <a href="mailto:bantengjne@gmail.com">bantengjne@gmail.com</a></p>
+        <p>Last updated: April 2026</p>
+    </div>
+
+</div>
+</body>
+</html>
